@@ -39,4 +39,4 @@ I am a Ph.D. mathematician, turned statistician, turned data scientist. I have a
 
 ## Contact
 
-Feel free to reach out via GitHub or professional networks.  
+Feel free to reach out via GitHub or [LinkedIn](https://www.linkedin.com/in/donna-glassbrenner-ph-d).  
