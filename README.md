@@ -1,7 +1,7 @@
 # Donna Glassbrenner Portfolio
 
 This repository hosts my personal portfolio website, published at  
-[https://glassbrenner1.github.io/](https://glassbrenner1.github.io/).
+[https://dglassbrenner1.github.io/](https://dglassbrenner1.github.io/).
 
 ## About Me
 
