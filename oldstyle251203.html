@@ -94,82 +94,6 @@
     font-size: 1.2em;
     line-height: 0;
   }
-/* Responsive Navigation Buttons */
-nav a.nav-btn {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 180px;
-  height: 100px;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-family: 'Times New Roman', Times, serif;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease;
-  text-align: center;
-  padding: 0 12px;
-  box-sizing: border-box;
-}
-
-nav a.nav-btn span {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-  line-height: 1.2;
-}
-
-/* Tablet: 2-column layout with centered Contact */
-@media (max-width: 992px) and (min-width: 641px) {
-  nav {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, auto);
-    gap: 15px;
-    padding: 15px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  /* Buttons 1-4: normal 2-column placement */
-  nav a.nav-btn:nth-child(-n+4) {
-    grid-column: span 1;
-  }
-  
-  /* Contact (5th button): center span across both columns */
-  nav a.nav-btn:nth-child(5) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    max-width: 250px; /* Matches other buttons */
-  }
-  
-  nav a.nav-btn {
-    width: 100%;
-    height: auto;
-    min-height: 90px;
-    padding: 12px;
-    font-size: 0.95em;
-  }
-}
-
-/* Mobile: single column */
-@media (max-width: 640px) {
-  nav {
-    flex-direction: column !important;
-    gap: 10px;
-    padding: 10px;
-  }
-  nav a.nav-btn {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    min-height: 80px;
-    padding: 15px 12px;
-    font-size: 0.9em;
-  }
-}
-
 </style>
 </head>
 
@@ -206,80 +130,132 @@ nav a.nav-btn span {
 </div>
 
 <nav style="display: flex; justify-content: center; gap: 30px; padding: 20px;">
-  <a href="#about" class="nav-btn" style="background-color: #008080;" 
-     onmouseover="this.style.backgroundColor='#005c5c'" 
-     onmouseout="this.style.backgroundColor='#008080'">
+
+  <a href="#about" style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      height: 100px;
+      background-color: #008080; /* Deep Teal */
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Times New Roman', Times, serif;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    " onmouseover="this.style.backgroundColor='#005c5c'" onmouseout="this.style.backgroundColor='#008080'">
     <span style="font-size: 1.4em; font-weight: bold;">About</span>
-    <span style="font-size: 0.9em; margin-top: 6px;">Learn more about me</span>
+    <span style="font-size: 0.9em; margin-top: 6px; text-align: center;">Learn more about me</span>
   </a>
 
-  <a href="#fraudprojects" class="nav-btn" style="background-color: #c46210;" 
-     onmouseover="this.style.backgroundColor='#8b4500'" 
-     onmouseout="this.style.backgroundColor='#c46210'">
+  <a href="#fraudprojects" style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 100px;
+    background-color: #c46210; /* Burnt Orange */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: center;
+  " onmouseover="this.style.backgroundColor='#8b4500'" onmouseout="this.style.backgroundColor='#c46210'">
     <span style="font-size: 1.4em; font-weight: bold;">Fraud Detection Projects</span>
-    <span style="font-size: 0.9em; margin-top: 6px;"></span>
+    <span style="font-size: 0.9em; margin-top: 6px; text-align: center;"></span>
   </a>
 
-  <a href="#generaldata" class="nav-btn" style="background-color: #0077b5;" 
-     onmouseover="this.style.backgroundColor='#005983'" 
-     onmouseout="this.style.backgroundColor='#0077b5'">
+  <a href="#generaldata" style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      height: 100px;
+      background-color: #0077b5; /* LinkedIn Blue */
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Times New Roman', Times, serif;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+      padding-left: 18px;
+      padding-right: 18px;
+      text-align: center;
+    " onmouseover="this.style.backgroundColor='#005983'" onmouseout="this.style.backgroundColor='#0077b5'">
     <span style="font-size: 1.4em; font-weight: bold;">Custom Data Analysis Projects</span>
-    <span style="font-size: 0.9em; margin-top: 6px;"></span>
+    <span style="font-size: 0.9em; margin-top: 6px; text-align: center;"> </span>
   </a>
 
-  <a href="#vehiclesafetyprojects" class="nav-btn" style="background-color: #2e8b57;" 
-     onmouseover="this.style.backgroundColor='#1f5e3b'" 
-     onmouseout="this.style.backgroundColor='#2e8b57'">
+  <a href="#vehiclesafetyprojects" style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      height: 100px;
+      background-color: #2e8b57; /* Forest Green */
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Times New Roman', Times, serif;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+      padding-left: 18px;
+      padding-right: 18px;
+      text-align: center;
+    " onmouseover="this.style.backgroundColor='#1f5e3b'" onmouseout="this.style.backgroundColor='#2e8b57'">
     <span style="font-size: 1.4em; font-weight: bold;">Vehicle Safety Work</span>
-    <span style="font-size: 0.9em; margin-top: 6px;"></span>
+    <span style="font-size: 0.9em; margin-top: 6px; text-align: center;"> </span>
   </a>
 
-  <a href="#contact" class="nav-btn" style="background-color: #6a5acd;" 
-     onmouseover="this.style.backgroundColor='#473e9b'" 
-     onmouseout="this.style.backgroundColor='#6a5acd'">
+  <a href="#contact" style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      height: 100px;
+      background-color: #6a5acd; /* Slate Blue */
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Times New Roman', Times, serif;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    " onmouseover="this.style.backgroundColor='#473e9b'" onmouseout="this.style.backgroundColor='#6a5acd'">
     <span style="font-size: 1.4em; font-weight: bold;">Contact</span>
-    <span style="font-size: 0.9em; margin-top: 6px;">Get in touch</span>
+    <span style="font-size: 0.9em; margin-top: 6px; text-align: center;">Get in touch</span>
   </a>
+
 </nav>
+
 
 <section id="about">
   <h2>About Me</h2>
-  <p><strong>Statistician, Data Scientist, and Data Analyst with 20+ Years of Experience</strong></p>
-  <p><strong>Proven impact:</strong> Recipient of 21 awards for innovative analyses and cross-functional collaboration.</p>
-  <p>
-  I bring a rare combination of deep mathematical and statistical expertise coupled 
-  with machine learning proficiency. I have used this rich skillset to:
-</p>
-<ul>
-  <li>Enhance ML models with advanced statistics for better predictions and deeper insights</li>
-  <li>Develop custom solutions beating generative AI (ratios, rare events, data dependence)</li>
-  <li>Formalize and solve complex, ambiguous problems using a comprehensive analytical toolkit</li>
-  <li>Apply a full data analysis lifecycle: formalizing objectives → data challenges → analytical issues → big-picture implications</li>
-</ul>
- <p>
-  I do this while collaborating closely with cross-functional teams and stakeholders 
-  to ensure iterative feedback and clear, actionable insights.
-  My key tools include Python (numpy, pandas, matplotlib), SQL, and Tableau.
-  </p>
-  <p>
-  My professional experience includes 20+ years in vehicle safety/risk analysis, 6 years in 
-  education, and recent self-initiated projects in fraud detection.  I seek fully remote, no-travel roles in 
-  fraud prevention, educational technology, or health and safety.
-</p>
-<p>
-    Explore my projects below to see real-world examples of my analytic approach and impact.
-  </p>
+  <!-- About content here -->
+   I am a Ph.D. mathematician with extensive experience in data analysis, statistics, and data science. 
+   My expertise lies in:
+  <ul>
+    <li>improving machine learning models by using advanced statistical methods</li>
+    <li>using math and statistics to develop custom solutions to data analysis problems, and</li>
+    <li>formalizing and solving complex ambiguous problems.</li>
+  </ul>
+   Below is a selection of my work in fraud detection, vehicle safety, and data analysis in general. 
 </section>
 
 <section id="fraudprojects">
   <h2>Fraud Detection Projects</h2>
   <p><strong>Self-Initiated R&D via Analysis Insights, LLC:</strong> 
     These projects showcase my independent research using synthetic and public datasets to advance 
-    fraud detection techniques.
-    The first group of projects focuses on applying mathematics and statistics to understand and enhance fraud 
-    detection machine learning models. The final three projects demonstrate my hands-on experience with 
-    modern data and ML platforms, including Databricks, Hugging Face Spaces, Snowflake, and dbt.
-</p>
+    fraud detection techniques, featured in my consulting portfolio.</p>
 
   <ul class="featured-list">
     <li>
@@ -298,8 +274,7 @@ nav a.nav-btn span {
       <a href="https://github.com/dglassbrenner1/how-bad-could-this-emergent-fraud-be/" target="_blank" rel="noopener noreferrer">How Bad Could This Emergent Fraud Be?</a><br>
       <small>You have uncovered a new way that criminals are committing fraud, with 3 unrelated cases out of 1,000 transactions. 
         How pervasive could this new fraud type be? Can answers from generative AI or a Stats 101 webpage be trusted? 
-        In this project, I show how "AI/Stats 101" can lead you astray, underestimating the fraud rate upper confidence bound by as much as 30%, 
-        and how to get the right answers with proper stats.</small>
+        In this project, I show how much "AI/Stats 101" can lead you astray, and how to get the right answers with proper stats.</small>
       <div class="skill-tags">
         <span class="tag stat-methods"><span class="tag-icon">∑</span>statistical distributions</span>
         <span class="tag stat-methods"><span class="tag-icon">∑</span>quantifying uncertainty</span>
@@ -392,17 +367,9 @@ nav a.nav-btn span {
 <section id="generaldata">
   <h2>Customized Data Analyses</h2>
   <div style="background-color: #fff3cd; border: 1px solid #ffeaa7; color: #856404; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-weight: bold;">
-  📋 <strong>Coming soon:</strong> Detailed write-ups for these projects. 
-  To illustrate the analytical challenges I have solved, I use fully simulated data and 
-  altered contexts so as not to reveal any non-public information. 
-  These examples showcase my problem-solving approach and custom analytical solutions.
+    ⚠️ Section under construction!
   </div>
-
-  <p>This section spotlights challenging, custom data analysis problems I have solved in settings 
-    where standard approaches often fall short.
-  </p>
-  <p>   
-    When I was learning and teaching math and statistics, I might have wondered how often the problems I would 
+  <p>When I was learning and teaching math and statistics, I might have wondered how often the problems I would 
     later encounter in the "real world" would be solved by simple cookie-cutter applications of the formulas and 
     techniques I was learning or teaching. It turns out, not very often.  
   </p>
@@ -413,23 +380,19 @@ nav a.nav-btn span {
     approximation and it wasn't quite clear if the approximation would be good enough for the client's 
     requirements.
   </p>
-  <p> 
     I don't know what "most" analysts do in these situations. Some (or many?) might lack the in-depth math 
     understanding needed to address such issues head-on and instead default to applying cookie-cutter techniques that 
     might not give accurate answers. They might or might not be able to explain the limitations of their 
     simplified analysis to their client. The client walks away with what they think have solid conclusions, 
     but they don't. 
-  </p>
-  <p>  
+  <p> 
     I approach these situations differently. I enjoy the challenge of formalizing ambiguous problems, 
     identifying and addressing deviations from standard protocols, and determining whether approximations 
     are good enough. I have the math and statistics background needed to tackle these issues head-on, 
     and I can explain the limitations of various approaches to my clients so they can make informed decisions.
-   </p>
-  <p> 
+  </p>
     This section highlights some of the types of customized data analysis problems I have solved. 
     I use made-up numbers and have hidden contextual details so as not to reveal non-public information.
-  </p>
   <p> 
     To showcase the value of my custom analyses, I sometimes include what a cookie-cutter approach that you 
     might have gotten from generative AI, a Stats 101 website, or a lesser-equipped analyst.   
@@ -460,12 +423,12 @@ nav a.nav-btn span {
       </div>
     </li>
 
+
     <li>
-      <a href="#" onclick="return false;" aria-disabled="true" 
-      title="Write-up coming soon">How Should I Do This? Design a Plan for Me. (Coming soon)</a><br>
+      <a href="LinkTBD" 
+      target="_blank" rel="noopener noreferrer">How Should I Do This? (Design a Plan for Me.)</a><br>
       <small>You know what you want but not how to do it. Maybe you want to estimate the rate of occurrence 
-        of a rare event.  Maybe you want to know if a countermeasure worked. Or maybe something else. 
-        Doing it right can mean the difference between making 
+        of a rare event.  Maybe you want to know if a countermeasure worked. Or maybe something else. Doing it right can mean the difference between making 
         valid conclusions or not, or getting more precise answers at less cost.  
       </small>
       <div class="skill-tags">
@@ -479,9 +442,9 @@ nav a.nav-btn span {
       </div>
     </li>
 
-    <li>    
-      <a href="#" onclick="return false;" aria-disabled="true" 
-      title="Write-up coming soon">How Good Is This Plan? (Coming soon)</a><br>
+    <li>
+      <a href="LinkTBD" 
+      target="_blank" rel="noopener noreferrer">How Good Is This Plan? </a><br>
       <small>You know what you want, and you have a plan. How robust is it?  Or you have candidate plans
         Which plan should you choose?  
       </small>
@@ -492,8 +455,8 @@ nav a.nav-btn span {
     </li>
 
     <li>
-      <a href="#" onclick="return false;" aria-disabled="true" 
-      title="Write-up coming soon">How Do I Deal with This Aspect? (Coming soon)</a><br>
+      <a href="LinkTBD" 
+      target="_blank" rel="noopener noreferrer">How Do I Deal with This Aspect? </a><br>
       <small>Data is messy. Missing values, imperfect tests, reporting lags. What is an analyst to do?  
       </small>
       <div class="skill-tags">
@@ -506,8 +469,8 @@ nav a.nav-btn span {
     </li>
 
     <li>
-      <a href="#" onclick="return false;" aria-disabled="true" 
-      title="Write-up coming soon">Big Questions (Coming soon)</a><br>
+      <a href="LinkTBD" 
+      target="_blank" rel="noopener noreferrer">Big Questions? </a><br>
       <small>You've got the small picture nailed.  What's the big picture?  You want to aggregate small-scale impacts 
         (like individual test results) into big picture impacts (nationwide implications). Maybe you have results 
         from various studies to incorporate. Or you want to know the large-scale implications of what-if scenarios.  
@@ -522,27 +485,19 @@ nav a.nav-btn span {
 
 <section id="vehiclesafetyprojects">
   <h2>Vehicle Safety Work</h2>
-  <p><p>
-  My vehicle safety work includes extensive collaboration with engineers and behavioral scientists to 
-  design studies, analyze data, and evaluate safety interventions. While some analyses were unpublished 
-  or advisory, the published projects below demonstrate impactful modeling and statistical innovation 
-  used to improve vehicle safety and policy. For illustrative examples of unpublished analytic work 
-  using simulated data and made-up contexts—including fraud-themed examples—see the 
-  <a href="#generaldata">Customized Data Analyses</a> section and the 
-  <a href="#fraudprojects">Fraud Detection Projects</a> section.
-
-</p>
- </p>
+  <p>Much of the work I did in vehicle safety was never published. Sometimes I did work for engineers or behavioral 
+    scientists, helping them design a study, test a design, or analyze results.  The study might subsequently change
+    or be replaced by a competing priority, or reports writing it up might not mention my work. Or I might 
+    have been asked to look over someone else's analysis (such as a contractor's). To give an idea of the types of 
+    analyses I did that weren't published, see the section <a href="#generaldata">Customized Data Analyses</a> above.
+    For my work that was published, see the following. </p>
   <ul class="featured-list">
     
     <li>
       <a href="featured-documents/Report%20to%20Congress,%20Vehicle%20Safety%20Recall%20Completion%20Rates%202021.pdf" target="_blank" rel="noopener noreferrer">Report to Congress, Vehicle Safety Recall Completion Rates 2021</a><br>
-      <small>This report analyzes trends in vehicle recall completion rates and identifies risk factors associated with low compliance. 
-        (Recall completion rates indicate the share of recalled vehicles that have been repaired or otherwise remedied.) 
-        I conducted the modeling and drafted sections IIIc, IIId, V, and VI. In addition to the Williams-adjusted 
-        fixed-effects logistic regression described in the report, I also built decision trees and generalized linear models, 
-        using LASSO, stepwise selection, and multi-fold cross-validation. My champion model was implemented by NHTSA to 
-        identify low-performing recalls for follow-up.</small>
+      <small>A report on trends in vehicle safety recall completion rates and identifying risk factors associated with lower completion rates. (Recall completion rates indicate the share of recalled vehicles that have been repaired or otherwise remedied.) 
+        I conducted the modeling and drafted sections IIIc, IIId, V, and VI. In addition to the Williams-adjusted fixed-effects logistic regression described in the report, I also built  
+        decision trees and generalized linear models, using LASSO, stepwise selection, and multi-fold cross-validation. My champion model was implemented by NHTSA to identify low-performing recalls for follow-up.</small>
       <div class="skill-tags">
         <span class="tag stat-methods"><span class="tag-icon">∑</span>LASSO</span>
         <span class="tag stat-methods"><span class="tag-icon">∑</span>stepwise selection</span>
@@ -611,16 +566,13 @@ nav a.nav-btn span {
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>
-    With a passion for driving informed decision-making and collaborating across disciplines to solve complex problems, 
-    I am actively seeking fully remote, no-travel roles in fraud detection, educational technology, or health and safety.
-    I am available for full-time or part-time work, either as an employee or through my consulting firm, Analysis Insights, LLC.
-  </p>
-  <p>
-    Please feel free to get in touch, or connect with me on LinkedIn: 
-    <a href="https://www.linkedin.com/in/donna-glassbrenner-ph-d/" target="_blank" rel="noopener noreferrer">Donna Glassbrenner on LinkedIn</a>.
-  </p>
+  <!-- Contact content here -->
+  I am passionate about driving informed decision-making and collaborating across disciplines to solve complex problems.
+  Feel free to reach out to me via LinkedIn at 
+  <a href="https://www.linkedin.com/in/donna-glassbrenner-ph-d/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/donna-glassbrenner-ph-d/</a>.<br><br>
+  If you have a data analysis problem you need solved, I might be available to help through 
+  my consulting firm, Analysis Insights, LLC at  
+  <a href="https://www.linkedin.com/company/analysis-insights-llc/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/company/analysis-insights-llc/</a>.<br><br>
 </section>
-
 </body>
 </html>

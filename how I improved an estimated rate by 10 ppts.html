@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Improving Failure Rate Estimate</title>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+
+<h1>How I improved the estimate of how big a failure rate could be by 10 percentage points</h1>
+
+<h2>Summary</h2>
+<p><strong>My answer (the real answer):</strong> With 95% confidence, the failure rate is &lt; 39%.</p>
+<p><em>Gen AI / Stats 101 “answer”:</em> the failure rate is \(10\% \pm 19\%\) with 95% confidence.</p>
+<p><strong>My value-added improvement:</strong> 10 percentage points (39% vs 29%).</p>
+
+<h2>The full scenario</h2>
+<p>If my cubicle in my old job was a statistical shop, a not infrequent situation went something like this:</p>
+
+<p>An engineer would walk in and say something like: “Our lab tested ten units and one failed. 
+  What can I conclude about the failure rate?”</p>
+
+<p>After the usual pleasantries, I’d ask about the tests to see if they were independent and identical 
+  (they usually were) and how confident s/he’d like to be in the answer (90%? 99%?).</p> 
+
+<p>I’d run some binomial computations and give an answer like: “You can be 90% confident that the 
+  failure rate is less than 34%, and 95% confident that it’s less than 39%”. (For good measure, I’d 
+  throw in a reminder about the assumptions, and maybe a note about multiple confidence assertions.)</p>
+
+<p>So how did I improve the estimate of how big the failure rate could be by 10 percentage points?</p>
+
+<p>If instead of walking into my cubicle, the engineer had consulted AI or a Stats 101 website, 
+  they might well have gotten an answer that was some combination of “the failure rate is \(10\% \pm 19\%\)” 
+  or “you can’t conclude anything because \(np < 5\)”, based on the normal approximation.</p>
+<p>(When asked, Perplexity both gave the formula for the normally-approximated confidence interval 
+  and said “the sample size is too small for statistical significance”.)</p>
+<p>So, my binomial computations prevented the engineer from getting a false sense of security about 
+  how bad the failure rate could be. And the difference between the two is \(39\% - 29\% = 10\) percentage points.</p>
+
+<h2>The math</h2>
+<p>Given a confidence level \(L\) (e.g., \(0.95\)) and \(X \sim \text{Bin}(n, p)\), 
+  where \(p\) denotes the unknown failure rate,   we want the smallest \(b \in [0, 1]\) for which 
+  \(p \leq b\) with \(L \times 100\%\) confidence.</p>
+<p>Why? Because the hypothesis test \(\{H_0: p \geq b, H_a: p < b\}\) rejects \(H_0\) when 
+  $$P(X \leq k \mid X \sim \text{Bin}(n, b)) < 1 - L.$$ 
+</p>
+<p>Consider the function \(f: [0,1] \to [0,1]\) defined by 
+  $$f(x) := P(X \leq k \mid X \sim \text{Bin}(n, x))\.$$ 
+  This function is non-increasing, with \(f(0) = 1\) and
+\(f(1) = \begin{cases}
+0, & k < n \\
+1, & k = n
+\end{cases}\)</p>
+<p>The rejection region for the hypothesis test is \((b, 1]\) where \(f(b) = 1 - L\).</p>
+
+<p>Here’s an illustration with \(k=1\) and \(L=0.95\): </p>
+
+<p>  <img src="BinomCDF(1,10,x) w upper 95 conf bd.png" alt="Binomial(1,10,x) cdf w upper 95 confidence bound" width="500" height="300" /></p>
+
+<p>If \(k = n\), then \(b = 1\). If \(k < n\), \(b\) is the solution to 
+  $$P(X \leq k \mid X \sim \text{Bin}(n, b)) = 1 - L$$ 
+  for all intents and purposes. (I say "for all intents and purposes" because there is no smallest \(b\). 
+  The solution to \(P(X \leq k \mid X \sim \text{Bin}(n, b)) = 1 - L\) has the p-value \(1 - L\), 
+  so isn't really in the rejection region. But \(b + \epsilon\) is for all \(\epsilon > 0\).)</p>
+
+<h2>What other situations this solution applies to</h2>
+<ul>
+<li>Estimating the potential extent of a problem</li>
+<li>In particular for fraud: estimating how pervasive a new threat vector might be 
+  (LinkedIn post at <a href="https://www.linkedin.com/posts/activity-7394018994925625344-ZHAI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFmtAVkBHB1hBzAhZv0QLtcY55Q_sKSUiMk" target="_blank" rel="noopener noreferrer">LinkedIn post</a>)</li>
+</ul>
+
+</body>
+</html>
+
