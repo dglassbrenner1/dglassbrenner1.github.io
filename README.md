@@ -49,4 +49,4 @@ Key files and folders:
 - **GitHub profile:** https://github.com/dglassbrenner1  
 - **LinkedIn:** https://www.linkedin.com/in/donna-glassbrenner-ph-d  
 
-I am seeking fully remote, no-travel roles in fraud detection, educational technology, or health and safety, and I am also open to consulting engagements through Analysis Insights, LLC.
+I am seeking fully remote roles (no travel) in fraud detection, social impact (education, health, safety), product testing, or manufacturing (avoiding marketing/sales roles). Open to W2 or 1099, full-time or part-time (20-40 hrs/week).
