@@ -49,6 +49,31 @@
     margin-bottom: 0.7em;
   }
 
+  /* Highlight box for flagship project */
+  .flagship-project {
+    background-color: #fff9e6;
+    border: 3px solid #c46210;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(196, 98, 16, 0.2);
+  }
+  .flagship-project h3 {
+    color: #8b4500;
+    margin-top: 0;
+    font-size: 1.4em;
+  }
+  .flagship-badge {
+    display: inline-block;
+    background-color: #c46210;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+
   /* Skill tags container */
   .skill-tags {
     margin-top: 8px;
@@ -294,9 +319,55 @@ nav a.nav-btn span {
   <h2>Fraud Detection Projects</h2>
   <p><strong>Self-Initiated R&D via Analysis Insights, LLC:</strong> 
     These projects showcase my independent research using synthetic and public datasets to advance 
-    fraud detection techniques. Projects are organized by focus area: statistical enhancements to ML, 
-    business optimization, model benchmarking & deployment, and technical expositions.
+    fraud detection techniques. My current flagship project demonstrates production-ready thinking, 
+    while foundation projects explore statistical enhancements, business optimization, and deployment techniques.
   </p>
+
+  <!-- FLAGSHIP PROJECT - NEW! -->
+  <div class="flagship-project">
+    <h3>
+      <a href="https://github.com/dglassbrenner1/fraud-detection-hybrid-system" target="_blank" rel="noopener noreferrer">
+        Hybrid Fraud Detection: Production-Ready ML + Rules System
+      </a>
+      <span class="flagship-badge">CURRENT PROJECT</span>
+    </h3>
+    
+    <p style="font-weight: bold; font-style: italic; margin-top: 15px;">
+      Demonstrating the progression from academic ML to real-world deployment, incorporating business constraints, 
+      domain knowledge, and cost-based optimization often overlooked in standard approaches.
+    </p>
+    
+    <p><strong>Hybrid Architecture:</strong> Combined rule-based logic (impossible travel, burst detection, velocity thresholds) 
+    with Random Forest ML (18 features) for explainability + nuance. Rules provide instant explanations for blocked transactions; 
+    ML captures subtle patterns rules miss.</p>
+    
+    <p><strong>Cost-Based Optimization:</strong> Minimized total issuer cost (fraud losses + false positive costs + manual review + chargebacks) 
+    rather than F1-score. Grid search over 512 threshold combinations on validation set yielded <strong>$40K savings</strong> (20% improvement) 
+    vs. arbitrary thresholds. Demonstrates business-driven ML rather than metric-driven ML.</p>
+    
+    <p><strong>Realistic Issuer Economics:</strong> Modeled EMV liability shift (merchant pays for 85% card-present fraud post-2015), 
+    3D Secure adoption (15% U.S. merchants vs. 80% Europe), dispute probability patterns (30% for <$10, 95% for >$500), 
+    customer churn (2% after false positive × $2,000 LTV), interchange revenue loss (2%).</p>
+    
+    <p><strong>8 Fraud Typologies:</strong> Analyzed detection rates across card testing (98%), stolen card CNP (95%), 
+    account takeover (92%), friendly fraud (90%), synthetic identity (85%), refund fraud (88%), application fraud (87%), 
+    lost/stolen card (95%). Detailed pattern specifications for each type.</p>
+    
+    <p><strong>Results:</strong> <strong>48% cost reduction</strong> vs. rules-only ($314K → $162K), 10% vs. ML-only ($180K), 
+    on simulated transaction data (47,109 transactions, 1.63% fraud rate, 500 cardholders, 6 months).</p>
+    
+    <div class="skill-tags">
+      <span class="tag ml-models"><span class="tag-icon">🧠</span>Random Forest</span>
+      <span class="tag ml-models"><span class="tag-icon">🧠</span>cost-based optimization</span>
+      <span class="tag stat-methods"><span class="tag-icon">∑</span>grid search</span>
+      <span class="tag stat-enhance"><span class="tag-icon">🔍</span>business-driven ML</span>
+      <span class="tag deployment"><span class="tag-icon">🐍</span>Python</span>
+      <span class="tag deployment"><span class="tag-icon">🐍</span>scikit-learn</span>
+    </div>
+  </div>
+
+  <h3 style="color: #8b4500; margin-top: 40px; border-top: 2px solid #c46210; padding-top: 20px;">Foundation Work</h3>
+  <p style="font-style: italic;">Supporting research exploring statistical enhancements, business optimization, and deployment techniques.</p>
 
   <h3 style="color: #8b4500; margin-top: 30px;">Statistical Enhancements to Machine Learning</h3>
   <p style="font-style: italic;">Demonstrating how deep statistical expertise reveals insights and improves accuracy beyond what ML alone achieves.</p>
@@ -546,7 +617,7 @@ nav a.nav-btn span {
     <li>    
       <a href="#" onclick="return false;" aria-disabled="true" 
       title="Write-up coming soon">How Good Is This Plan? (Coming soon)</a><br>
-      <small>You know what you want, and you have a plan. How robust is it?  Or you have candidate plans
+      <small>You know what you want, and you have a plan. How robust is it?  Or you have candidate plans.
         Which plan should you choose?  
       </small>
       <div class="skill-tags">
