@@ -1,52 +1,45 @@
-# Donna Glassbrenner, Ph.D. - Data Science & Portfolio
+# Donna Glassbrenner, Ph.D. - Data Science Portfolio
 
-This repository hosts my personal portfolio website (`dglassbrenner1.github.io`), showcasing my work in fraud detection, customized data analysis, and vehicle safety/risk analytics.
+This repository hosts my personal portfolio website (`dglassbrenner1.github.io`), showcasing analytical work spanning fraud detection, customized statistical methods, and vehicle safety research.
 
 ---
 
 ## 🌐 What This Portfolio Shows
 
-The live site is designed for hiring managers, recruiters, and collaborators interested in:
+The live site demonstrates my analytical capabilities through:
 
-- **Fraud Detection Projects** – Self-initiated R&D using synthetic and public datasets to explore fraud detection, combining machine learning with advanced statistics.
-- **Customized Data Analyses** – Illustrative examples of non-standard, complex analytical problems (ratios, rare events, reporting lags, ambiguous objectives) where cookie-cutter or “Stats 101/AI” approaches can fail, and how custom statistical methods address them.
-- **Vehicle Safety Work** – Selected published reports and papers from my vehicle safety and risk analysis career, including modeling, sample design, and impact estimation.
-- **About & Contact** – My background, focus areas, and how to reach me for fully remote, no-travel roles in fraud detection, educational technology, or health and safety.
+- **Fraud Detection Projects** – Self-initiated R&D combining machine learning with advanced statistical methods. Projects demonstrate production-oriented thinking (48% cost reduction optimizing for business value) and custom statistical approaches (30% accuracy improvements) using synthetic and public datasets.
 
-For a more narrative overview of my skills and experience, see the About section on the live site.
+- **Customized Data Analyses** – Examples of complex analytical problems where standard approaches fall short: handling ratios, rare events, reporting lags, and ambiguous requirements. Shows how custom statistical methods solve problems that cookie-cutter approaches miss.
+
+- **Vehicle Safety Work** – Published reports and papers from 24 years at NHTSA, including predictive modeling, sample design, impact estimation, and risk quantification affecting millions of vehicles.
+
+- **About & Contact** – Background, technical capabilities, and how to connect.
 
 ---
 
 ## 🛠 Tech Stack
 
-The site is intentionally lightweight and simple:
+Intentionally lightweight and accessible:
 
-- HTML and CSS for layout, styling, and navigation
-- A small amount of inline JavaScript for interactivity (e.g., hover effects)
+- HTML and CSS for layout and styling
+- Minimal inline JavaScript for interactivity
 - GitHub Pages for hosting and deployment
 
 ---
 
 ## 📁 Repository Structure
 
-Key files and folders:
-
-- `index.html` – Main landing page, including:
-  - Header and navigation buttons
-  - **About Me** section
-  - **Fraud Detection Projects**
-  - **Customized Data Analyses**
-  - **Vehicle Safety Work**
-  - **Contact** section
-- `featured-documents/` – Selected PDFs and reports referenced in the Vehicle Safety section (e.g., NHTSA reports, conference papers)
-- Additional assets (if present), such as images or stylesheets, are stored in their respective folders (e.g., `assets/`, `css/`).
+- `index.html` – Main landing page with navigation and project sections
+- `featured-documents/` – PDFs and reports referenced in Vehicle Safety section
+- Additional assets in respective folders (if present)
 
 ---
 
-## 🔗 Live Site & Contact
+## 🔗 Live Site & Connect
 
-- **Live portfolio:** https://dglassbrenner1.github.io  
-- **GitHub profile:** https://github.com/dglassbrenner1  
+- **Portfolio:** https://dglassbrenner1.github.io  
+- **GitHub:** https://github.com/dglassbrenner1  
 - **LinkedIn:** https://www.linkedin.com/in/donna-glassbrenner-ph-d  
 
-I am seeking fully remote roles (no travel) in fraud detection, social impact (education, health, safety), product testing, or manufacturing (avoiding marketing/sales roles). Open to W2 or 1099, full-time or part-time (20-40 hrs/week).
+Available for consulting through Analysis Insights, LLC and open to remote analytical roles.
